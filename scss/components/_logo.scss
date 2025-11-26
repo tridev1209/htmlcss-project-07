@@ -7,9 +7,10 @@
         gap: 10px;
         margin-left: 40px;
     }
-    @include abstracts.breakpoint(sm) {
-        margin-left: 0;
+    @include abstracts.breakpoint(md) {
+        margin: 0 auto;
     }
+
     &__img {
         @include abstracts.breakpoint(lg) {
             width: 24px;
