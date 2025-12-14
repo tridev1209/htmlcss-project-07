@@ -1,18 +1,32 @@
 <div class="container">
     <div class="top-bar">
-        <button class="top-bar__more">
+        <button class="top-bar__more js-toggle d-none d-lg-block" toggle-target="#navbar">
             <img src="./assets/icons/more.svg" alt="" class="icon top-bar__more-icon" />
         </button>
+
         <!-- Logo -->
         <a href="./" class="logo">
             <img src="./assets/icons/logo.svg" alt="Grocerymart" class="logo__img" />
             <h1 class="logo__title">grocerymart</h1>
         </a>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav id="navbar" class="navbar hide">
+            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+                <img src="../assets/icons/arrow-left.svg" alt="" class="icon"/>
+            </button>
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="./assets/icons/buy.svg" alt="" class="nav-btn__icon icon" />
+                <span class="nav-btn__title">Card</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="./assets/icons/heart.svg" alt="" class="nav-btn__icon icon" />
+                <span class="nav-btn__title">Favorite</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
-                    <a href="" class="navbar__link">
+                    <a href="#!" class="navbar__link">
                         Departments
                         <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__icon icon" />
                     </a>
@@ -22,7 +36,7 @@
                                 <div class="top-menu__main">
                                     <!-- Menu column -->
                                     <div class="menu-column">
-                                        <div class="menu-column__icon">
+                                        <div class="menu-column__icon d-lg-none">
                                             <img
                                                 src="./assets/image/categcory/cate-1.1.svg"
                                                 alt=""
@@ -35,8 +49,8 @@
                                             />
                                         </div>
                                         <div class="menu-column__content">
-                                            <h2 class="menu-column__heading">All Departments</h2>
-                                            <ul class="menu-column___list js-menu-list">
+                                            <h2 class="menu-column__heading d-lg-none">All Departments</h2>
+                                            <ul class="menu-column__list js-menu-list">
                                                 <li class="menu-column__item">
                                                     <a href="#!" class="menu-column__link">Savings & Featured Shops</a>
                                                     <!-- Sub menu for "Savings & Featured Shops" -->
@@ -361,7 +375,7 @@
                                                                     <h2 class="menu-column__heading">
                                                                         <a href="#!">TV & Video</a>
                                                                     </h2>
-                                                                    <ul class="menu-column___list">
+                                                                    <ul class="menu-column__list">
                                                                         <li class="menu-column__item">
                                                                             <a href="#!" class="menu-column__link"
                                                                                 >Shop all TVs</a
@@ -413,7 +427,7 @@
                                                                     <h2 class="menu-column__heading">
                                                                         <a href="#!"> Wearable Technology</a>
                                                                     </h2>
-                                                                    <ul class="menu-column___list">
+                                                                    <ul class="menu-column__list">
                                                                         <li class="menu-column__item">
                                                                             <a href="#!" class="menu-column__link"
                                                                                 >Galaxy Watch</a
@@ -463,7 +477,7 @@
                                                                     <h2 class="menu-column__heading">
                                                                         <a href="#!">Computers</a>
                                                                     </h2>
-                                                                    <ul class="menu-column___list">
+                                                                    <ul class="menu-column__list">
                                                                         <li class="menu-column__item">
                                                                             <a href="#!" class="menu-column__link"
                                                                                 >Shop All Computers</a
@@ -528,7 +542,7 @@
                                                                     <h2 class="menu-column__heading">
                                                                         <a href="#!">Savings</a>
                                                                     </h2>
-                                                                    <ul class="menu-column___list">
+                                                                    <ul class="menu-column__list">
                                                                         <li class="menu-column__item">
                                                                             <a href="#!" class="menu-column__link"
                                                                                 >Tech Savings</a
@@ -565,7 +579,7 @@
                                                                     <h2 class="menu-column__heading">
                                                                         <a href="#!">Cell Phones</a>
                                                                     </h2>
-                                                                    <ul class="menu-column___list">
+                                                                    <ul class="menu-column__list">
                                                                         <li class="menu-column__item">
                                                                             <a href="#!" class="menu-column__link"
                                                                                 >Wireless Deals</a
@@ -3846,7 +3860,7 @@
                     </div>
                 </li>
                 <li class="navbar__item">
-                    <a href="" class="navbar__link">
+                    <a href="#!" class="navbar__link">
                         Grocery
                         <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__icon icon" />
                     </a>
@@ -4146,7 +4160,7 @@
                     </div>
                 </li>
                 <li class="navbar__item">
-                    <a href="" class="navbar__link">
+                    <a href="#!" class="navbar__link">
                         Beauty
                         <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__icon icon" />
                     </a>
@@ -4426,14 +4440,15 @@
                 </li>
             </ul>
         </nav>
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
         <!-- Actions -->
         <div class="top-act">
-            <div class="top-act__group top-act__group--single">
+            <div class="top-act__group d-md-none top-act__group--single">
                 <button class="top-act__btn">
                     <img src="./assets/icons/search.svg" alt="" class="top-act__icon icon" />
                 </button>
             </div>
-            <div class="top-act__group">
+            <div class="top-act__group d-md-none">
                 <button class="top-act__btn">
                     <img src="./assets/icons/heart.svg" alt="" class="top-act__icon icon" />
                     <span class="top-act__title">03</span>

@@ -23,12 +23,14 @@ button {
     outline: none;
     background: transparent;
 }
-input,
-textsarea,
+a,
+textarea,
+img,
 select,
 button {
     font-family: inherit;
     color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 .icon {
     filter: var(--icon-color);

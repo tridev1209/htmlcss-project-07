@@ -18,5 +18,8 @@
     "bugs": {
         "url": "https://github.com/tridev1209/htmlcss-project-07/issues"
     },
-    "homepage": "https://github.com/tridev1209/htmlcss-project-07#readme"
+    "homepage": "https://github.com/tridev1209/htmlcss-project-07#readme",
+    "devDependencies": {
+        "sass": "^1.96.0"
+    }
 }

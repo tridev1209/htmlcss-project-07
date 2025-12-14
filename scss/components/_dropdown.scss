@@ -3,10 +3,18 @@
     position: absolute;
     left: 0;
     padding-top: 54px;
-    // visibility: hidden;
-    // opacity: 0;
+    visibility: hidden;
+    opacity: 0;
+
     width: min(1240px, 100%);
     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    @include abstracts.breakpoint(lg) {
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        position: initial;
+        padding-top: 0;
+    }
     &__inner {
         --inner-padding: 30px;
         --max-height-inner: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 1.2);
@@ -16,6 +24,7 @@
         border-radius: 20px;
         background: var(--dropdown-bg-color);
         box-shadow: 0 40px 90px 20px var(--dropdown-shadow-color);
+
         &::before {
             content: url("../icons/dropdown-arrow.svg");
             position: absolute;
@@ -23,6 +32,19 @@
             top: -13px;
             translate: -50%;
             filter: var(--dropdown-arrow-color);
+        }
+        @include abstracts.breakpoint(lg) {
+            --inner-padding: 0 40px;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+
+            &::before {
+                content: none;
+            }
+        }
+        @include abstracts.breakpoint(sm) {
+            --inner-padding: 0 20px;
         }
     }
 }
@@ -35,12 +57,20 @@
         width: var(--main-column-width);
         border-right: 1px solid var(--menu-main-border-color);
         overflow: auto;
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 .menu-column {
     display: flex;
 
     column-gap: 14px;
+    @include abstracts.breakpoint(lg) {
+        margin-top: 10px;
+    }
     + .menu-column {
         margin-top: 30px;
     }
@@ -76,9 +106,15 @@
         font-weight: 500;
         line-height: 1.5; /* 150% */
         color: var(--menu-column-color);
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 20px;
+        }
     }
-    &___list {
+    &__list {
         margin-top: 19px;
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
     &__item {
         &--active .sub-menu {
@@ -95,6 +131,7 @@
         padding: 7px 0;
         color: var(--menu-column-color);
         font-size: 1.4rem;
+        line-height: 150%;
     }
 }
 .sub-menu {
@@ -112,6 +149,10 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-height-inner);
         padding-left: 0;
+    }
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        grid-template-columns: 1fr;
     }
     @include abstracts.breakpoint(xl) {
         &--notmain {
