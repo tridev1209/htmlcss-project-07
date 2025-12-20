@@ -8,7 +8,7 @@
 
     width: min(1240px, 100%);
     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         display: none;
         visibility: visible;
         opacity: 1;
@@ -33,7 +33,7 @@
             translate: -50%;
             filter: var(--dropdown-arrow-color);
         }
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             --inner-padding: 0 40px;
             background: transparent;
             box-shadow: none;
@@ -43,7 +43,7 @@
                 content: none;
             }
         }
-        @include abstracts.breakpoint(sm) {
+        @include abstracts.screen(sm) {
             --inner-padding: 0 20px;
         }
     }
@@ -57,7 +57,7 @@
         width: var(--main-column-width);
         border-right: 1px solid var(--menu-main-border-color);
         overflow: auto;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 100%;
             height: auto;
             border-right: none;
@@ -68,7 +68,7 @@
     display: flex;
 
     column-gap: 14px;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         margin-top: 10px;
     }
     + .menu-column {
@@ -106,13 +106,13 @@
         font-weight: 500;
         line-height: 1.5; /* 150% */
         color: var(--menu-column-color);
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-bottom: 20px;
         }
     }
     &__list {
         margin-top: 19px;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
         }
     }
@@ -150,11 +150,11 @@
         height: var(--max-height-inner);
         padding-left: 0;
     }
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         grid-template-columns: 1fr;
     }
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.screen(xl) {
         &--notmain {
             column-gap: 20px;
         }
