@@ -20,4 +20,11 @@
     // Sidebar
     --sidebar-bg: #fff;
     --sidebar-shadow-color: rgba(200, 200, 200, 0.4);
+    //Categcory
+    --categcory-item-bg: #eee;
+    @include abstracts.screen(md) {
+        --categcory-item-bg: #fff;
+    }
+    --categcory-item-color: #000;
+    --categcory-item-thumb-bg: #fff;
 }
