@@ -1,3 +1,4 @@
+@use "../abstracts";
 *,
 ::before,
 ::after {
@@ -30,8 +31,16 @@ select,
 button {
     font-family: inherit;
     color: inherit;
+    padding: 0;
+    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
 .icon {
     filter: var(--icon-color);
+}
+.container {
+    @include abstracts.screen(sm) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
 }

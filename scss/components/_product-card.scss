@@ -1,0 +1,53 @@
+@use "../abstracts";
+.product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 20px;
+    background: var(--product-card-bg);
+    box-shadow: 0 20px 60px 10px var(--product-card-shadow-color);
+    gap: 16px 0;
+
+    &__img-wrap {
+        position: relative;
+        padding-top: 100%;
+    }
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__like-btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__brand {
+        font-size: 1.5rem;
+        line-height: 146.667%;
+        color: #9e9da8;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+    &__price,
+    &__title,
+    &__score {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+    &__price {
+        margin-right: auto;
+    }
+    &__score {
+        margin-left: 6px;
+    }
+}
