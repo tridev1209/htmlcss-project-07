@@ -23,17 +23,25 @@ button {
     border: none;
     outline: none;
     background: transparent;
+    cursor: pointer;
+    padding: 0;
 }
 a,
 textarea,
 img,
+input,
 select,
 button {
+    padding: 0;
+    outline: none;
+    border: none;
     font-family: inherit;
     color: inherit;
-    padding: 0;
-    cursor: pointer;
+
     -webkit-tap-highlight-color: transparent;
+}
+input {
+    background: transparent;
 }
 .icon {
     filter: var(--icon-color);
