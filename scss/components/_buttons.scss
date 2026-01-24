@@ -1,5 +1,8 @@
 // Buttons
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #f8f8fb;
     border-radius: 6px;
     padding: 0 20px;
@@ -8,7 +11,9 @@
     font-weight: 500;
     user-select: none;
     + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
     &--text {
         background: transparent;
@@ -33,6 +38,10 @@
     }
     &:hover {
         opacity: 0.9;
+    }
+    &__icon {
+        margin-right: 10px;
+        filter: var(--form-icon-color);
     }
 }
 .filter-btn {

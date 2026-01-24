@@ -208,6 +208,8 @@
         height: 38px;
         padding: 0 10px;
         @include abstracts.screen(sm) {
+            display: flex;
+            justify-content: center;
             flex: 1;
             height: 42px;
         }

@@ -46,4 +46,20 @@ html.dark {
     --filter-form-footer-bg: #292e39;
     // Footer
     --footer-bg-color: #171c28;
+    // Auth
+    --auth-content-bg: #292e39;
+
+    --auth-text-color: #b9babe;
+    // Form
+    --form-label-color: #b9babe;
+    --form-border-color: #b9babe;
+    --form-text-color: #b9babe;
+    --form-icon-color: #b9babe;
+    --form-icon-color: brightness(0) saturate(100%) invert(76%) sepia(62%) saturate(15%) hue-rotate(197deg)
+        brightness(89%) contrast(88%);
+    // Auth
+    --auth-intro-bg: #171c28;
+    --auth-heading-color: #b9babe;
+    --auth-intro-text-color: #b9babe;
+    --auth-btn-google-color: #b9babe;
 }

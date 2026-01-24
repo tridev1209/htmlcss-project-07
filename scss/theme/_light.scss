@@ -44,4 +44,15 @@
     --filter-form-footer-bg: #fff;
     // Footer
     --footer-bg-color: #eeeeee;
+    // Auth
+    --auth-content-bg: #fff;
+    --auth-text-color: #9e9da8;
+    // Form
+    --form-border-color: #d2d1d6;
+    --form-text-color: #d2d1d6;
+    --form-label-color: #9e9da8;
+    // Auth
+    @include abstracts.screen(md) {
+        --auth-content-bg: #fff;
+    }
 }
