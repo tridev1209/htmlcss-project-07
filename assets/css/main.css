@@ -2742,6 +2742,19 @@ html.dark {
   margin-left: auto;
 }
 
+.message {
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.message--success {
+  border: 1.5px solid #46a05c;
+  background: rgba(77, 241, 140, 0.2);
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2822,6 +2835,7 @@ html.dark {
   }
 }
 .auth__intro-img {
+  width: min(424px, 100%);
   max-width: 100%;
 }
 .auth__content {
@@ -2879,6 +2893,9 @@ html.dark {
     font-size: 1.4rem;
   }
 }
+.auth__message {
+  margin-top: 30px;
+}
 .auth__form {
   margin-top: 35px;
   width: 100%;
@@ -2887,6 +2904,9 @@ html.dark {
   .auth__form {
     margin-top: 5px;
   }
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 .auth__link {
   color: #0071dc;
