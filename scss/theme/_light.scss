@@ -40,7 +40,7 @@
     --filter--form-arrow-bg: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
         brightness(102%) contrast(102%);
     --filter-form-color-innode: #fff;
-    --filter-form-tag-bg: #f8f8fb;
+    --form-tag-bg: #f8f8fb;
     --filter-form-footer-bg: #fff;
     // Footer
     --footer-bg-color: #eeeeee;
@@ -54,5 +54,27 @@
     // Auth
     @include abstracts.screen(md) {
         --auth-content-bg: #fff;
+    }
+    // Search bar
+    --search-bar-bg: #fff;
+    // Product detail
+    --product-detail-bg: #fff;
+
+    --prod-info-bg: #f6f6f6;
+    --prod-info-tag-bg: #ededf6;
+    --prod-info-card-price: #000;
+    --product-content-bg: #fff;
+    @include abstracts.screen(sm) {
+        --product-detail-bg: #fafafd;
+
+        --prod-info-bg: #fff;
+    }
+    // Breadcrumbs
+    --breadcrumb-bg-color: #f6f6f6;
+
+    --breadcrumb-shadow-color: rgba(237, 237, 246, 0.2);
+    @include abstracts.screen(sm) {
+        --breadcrumb-bg-color: #fff;
+        // --breadcrumb-shadow-color: none;
     }
 }

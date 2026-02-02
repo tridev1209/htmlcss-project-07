@@ -42,7 +42,7 @@ html.dark {
     --filter-form-arrow-bg: brightness(0) saturate(100%) invert(10%) sepia(4%) saturate(5599%) hue-rotate(184deg)
         brightness(91%) contrast(79%);
     --filter-form-color-innode: #292e39;
-    --filter-form-tag-bg: #171c28;
+    --form-tag-bg: #171c28;
     --filter-form-footer-bg: #292e39;
     // Footer
     --footer-bg-color: #171c28;
@@ -62,4 +62,21 @@ html.dark {
     --auth-heading-color: #b9babe;
     --auth-intro-text-color: #b9babe;
     --auth-btn-google-color: #b9babe;
+    // Search bar
+    --search-bar-bg: #171c28;
+    // Product detail
+    --product-detail-bg: #292e39;
+    --product-content-bg: transparent;
+    --prod-info-bg: #171c28;
+    --prod-info-tag-bg: #292e39;
+    --prod-info-card-price: #eee;
+    --prod-prop-icon: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(1942%) hue-rotate(171deg)
+        brightness(121%) contrast(87%);
+
+    @include abstracts.screen(sm) {
+        --product-content-bg: #171c28;
+    }
+    // Breadcrumbs
+    --breadcrumb-bg-color: #171c28;
+    --breadcrumb-shadow-color: rgba(23, 28, 40, 0.2);
 }
