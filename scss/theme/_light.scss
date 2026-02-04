@@ -57,13 +57,23 @@
     }
     // Search bar
     --search-bar-bg: #fff;
+    @include abstracts.screen(sm) {
+        --search-bar-bg: #fff;
+    }
+    @include abstracts.screen(md) {
+        --search-bar-bg: #f6f6f6;
+    }
+
     // Product detail
     --product-detail-bg: #fff;
-
+    @include abstracts.screen(md) {
+        --product-detail-bg: #fafafd;
+    }
     --prod-info-bg: #f6f6f6;
     --prod-info-tag-bg: #ededf6;
     --prod-info-card-price: #000;
     --product-content-bg: #fff;
+
     @include abstracts.screen(sm) {
         --product-detail-bg: #fafafd;
 
@@ -75,6 +85,10 @@
     --breadcrumb-shadow-color: rgba(237, 237, 246, 0.2);
     @include abstracts.screen(sm) {
         --breadcrumb-bg-color: #fff;
-        // --breadcrumb-shadow-color: none;
+    }
+    // Review card
+    --prod-review-card-bg: #fafafd;
+    @include abstracts.screen(md) {
+        --prod-review-card-bg: #fff;
     }
 }
