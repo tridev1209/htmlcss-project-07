@@ -212,6 +212,9 @@
             padding: 13px;
         }
     }
+    &__btn-wrap {
+        position: relative;
+    }
     &__btn {
         @extend %flex-itemCenter;
         padding: 13px 20px;
@@ -235,5 +238,118 @@
         object-fit: cover;
         border-radius: 8px;
         cursor: pointer;
+    }
+}
+.act-dropdown {
+    position: absolute;
+    right: -55px;
+    top: 80px;
+    width: min(645px, 100vw);
+    text-align: start;
+    transition: opacity, visibility;
+    transition-duration: 0.3s;
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__arrow {
+        position: absolute;
+
+        height: 20.5px;
+        top: -17px;
+        right: 90px;
+        filter: var(--act-dropdown-arrow-bg);
+    }
+    &__inner {
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--act-dropdown-bg);
+        box-shadow: 0 40px 90px 20px var(--act-dropdown--shadow);
+    }
+    &__top {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2.2rem;
+        line-height: 145.455%;
+    }
+    &__title {
+        font-weight: 500;
+    }
+    &__view-on {
+        font-size: 1.8rem;
+        color: #0071dc;
+        font-weight: 400;
+    }
+    &__list {
+        padding-bottom: 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    &__bottom {
+        &::before,
+        &::after {
+            content: "";
+            margin: 20px 0;
+            display: block;
+            background: var(--act-dropdown-separate-bg);
+            height: 1px;
+            width: 100%;
+        }
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        &--bolt {
+            font-weight: 500;
+        }
+    }
+    &__row + &__row {
+        margin-top: 15px;
+    }
+    &__label,
+    &__value {
+        font-size: 1.8rem;
+        line-height: 145.455%;
+    }
+    &__checkout {
+        display: flex;
+        justify-content: flex-end;
+        &-btn {
+            min-width: 278px;
+        }
+    }
+}
+.cart-review-item {
+    &__img-wrap {
+        border: 1.5px solid var(--act-dropdown-border-color);
+        border-radius: 10px;
+        position: relative;
+        padding-top: 100%;
+    }
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__title {
+        margin-top: 14px;
+        font-size: 1.4rem;
+
+        line-height: 142.857%;
+    }
+    &__price {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
     }
 }

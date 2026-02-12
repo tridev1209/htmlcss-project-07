@@ -13,6 +13,13 @@
         --header-bg: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
+    // Header
+    --act-dropdown-bg: #fff;
+    --act-dropdown--shadow: rgba(200, 200, 200, 0.4);
+    --act-dropdown-border-color: #ebebeb;
+    --act-dropdown-separate-bg: #d2d1d6;
+    --act-dropdown-arrow-bg: brightness(0) saturate(100%) invert(100%) sepia(12%) saturate(7500%) hue-rotate(208deg)
+        brightness(114%) contrast(113%);
     // Drop Down
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);

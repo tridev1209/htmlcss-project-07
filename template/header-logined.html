@@ -4454,10 +4454,183 @@
                     <span class="top-act__title">03</span>
                 </button>
                 <div class="top-act__separate"></div>
-                <button class="top-act__btn">
-                    <img src="./assets/icons/buy.svg" alt="" class="top-act__icon icon" />
-                    <span class="top-act__title">$65.42</span>
-                </button>
+                <div class="top-act__btn-wrap">
+                    <button class="top-act__btn js-toggle" toggle-target="#act-dropdown">
+                        <img src="./assets/icons/buy.svg" alt="" class="top-act__icon icon" />
+                        <span class="top-act__title">$65.42</span>
+                    </button>
+                    <!-- Dropdown -->
+                    <div class="act-dropdown hide" id="act-dropdown">
+                        <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow" />
+                        <div class="act-dropdown__inner">
+                            <div class="act-dropdown__top">
+                                <h2 class="act-dropdown__title">You have 3 item</h2>
+                                <a href="#!" class="act-dropdown__view-on">See All</a>
+                            </div>
+                            <div class="row row-cols-3 gx-2 act-dropdown__list">
+                                <!-- Cart review item 1 -->
+                                <div class="col">
+                                    <article class="cart-review-item">
+                                        <div class="cart-review-item__img-wrap">
+                                            <img
+                                                src="./assets/image/products/img-card-1.png"
+                                                alt=""
+                                                class="cart-review-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-review-item__title">Lavazza Coffee Blends</h3>
+                                        <p class="cart-review-item__price">$329.00</p>
+                                    </article>
+                                </div>
+
+                                <!-- Cart review item 2 -->
+                                <div class="col">
+                                    <article class="cart-review-item">
+                                        <div class="cart-review-item__img-wrap">
+                                            <img
+                                                src="./assets/image/products/img-card-2.png"
+                                                alt=""
+                                                class="cart-review-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-review-item__title">Coffee Beans Espresso</h3>
+                                        <p class="cart-review-item__price">$39.99</p>
+                                    </article>
+                                </div>
+                                <!-- Cart review item 3 -->
+                                <div class="col">
+                                    <article class="cart-review-item">
+                                        <div class="cart-review-item__img-wrap">
+                                            <img
+                                                src="./assets/image/products/img-card-3.png"
+                                                alt=""
+                                                class="cart-review-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-review-item__title">Qualità Oro Mountain</h3>
+                                        <p class="cart-review-item__price">$47.00</p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="act-dropdown__bottom">
+                                <div class="act-dropdown__row">
+                                    <span class="act-dropdown__label">Subtotal </span>
+                                    <span class="act-dropdown__value">$415.99</span>
+                                </div>
+                                <div class="act-dropdown__row">
+                                    <span class="act-dropdown__label"> Texes </span>
+                                    <span class="act-dropdown__value">Free</span>
+                                </div>
+                                <div class="act-dropdown__row">
+                                    <span class="act-dropdown__label">Shipping </span>
+                                    <span class="act-dropdown__value">$10.00</span>
+                                </div>
+                                <div class="act-dropdown__row act-dropdown__row--bolt">
+                                    <span class="act-dropdown__label"> Total Price </span>
+                                    <span class="act-dropdown__value">$425.99</span>
+                                </div>
+                            </div>
+                            <div class="act-dropdown__checkout">
+                                <a href="#!" class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
+                                    >Check Out All</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dropdown -->
+                    <div class="act-dropdown hide" id="act-dropdownact-dropdown">
+                        <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow hide" />
+                        <div class="act-dropdown__inner">
+                            <div class="act-dropdown__top">
+                                <h2 class="act-dropdown__title">You have 3 item</h2>
+                                <a href="#!" class="act-dropdown__view-on">See All</a>
+                            </div>
+                            <div class="row row-cols-3 gx-2 act-dropdown__list">
+                                <!-- Cart review item 1 -->
+                                <div class="col">
+                                    <article class="cart-review-item">
+                                        <div class="cart-review-item__img-wrap">
+                                            <img
+                                                src="./assets/image/products/img-card-1.png"
+                                                alt=""
+                                                class="cart-review-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-review-item__title">Lavazza Coffee Blends</h3>
+                                        <p class="cart-review-item__price">$329.00</p>
+                                    </article>
+                                </div>
+                                <!-- Cart review item 1 -->
+                                <div class="col">
+                                    <article class="cart-review-item">
+                                        <div class="cart-review-item__img-wrap">
+                                            <img
+                                                src="./assets/image/products/img-card-1.png"
+                                                alt=""
+                                                class="cart-review-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-review-item__title">Lavazza Coffee Blends</h3>
+                                        <p class="cart-review-item__price">$329.00</p>
+                                    </article>
+                                </div>
+
+                                <!-- Cart review item 2 -->
+                                <div class="col">
+                                    <article class="cart-review-item">
+                                        <div class="cart-review-item__img-wrap">
+                                            <img
+                                                src="./assets/image/products/img-card-2.png"
+                                                alt=""
+                                                class="cart-review-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-review-item__title">Coffee Beans Espresso</h3>
+                                        <p class="cart-review-item__price">$39.99</p>
+                                    </article>
+                                </div>
+
+                                <!-- Cart review item 3 -->
+                                <div class="col">
+                                    <article class="cart-review-item">
+                                        <div class="cart-review-item__img-wrap">
+                                            <img
+                                                src="./assets/image/products/img-card-3.png"
+                                                alt=""
+                                                class="cart-review-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-review-item__title">Qualità Oro Mountain</h3>
+                                        <p class="cart-review-item__price">$47.00</p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="act-dropdown__bottom">
+                                <div class="act-dropdown__row">
+                                    <span class="act-dropdown__label">Subtotal: </span>
+                                    <span class="act-dropdown__value">$415.99</span>
+                                </div>
+                                <div class="act-dropdown__row">
+                                    <span class="act-dropdown__label"> Texes: </span>
+                                    <span class="act-dropdown__value">Free</span>
+                                </div>
+                                <div class="act-dropdown__row">
+                                    <span class="act-dropdown__label">Shipping </span>
+                                    <span class="act-dropdown__value">$10.00</span>
+                                </div>
+                                <div class="act-dropdown__row act-dropdown__row--bolt">
+                                    <span class="act-dropdown__label"> Total Price </span>
+                                    <span class="act-dropdown__value">$425.99</span>
+                                </div>
+                            </div>
+                            <div class="act-dropdown__checkout">
+                                <a href="#!" class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
+                                    >Check Out All</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="top-act__user">
                 <img src="./assets/image/avatar.jpg" alt="" class="top-act__avatar" />

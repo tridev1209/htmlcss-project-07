@@ -12,6 +12,13 @@ html.dark {
     @include abstracts.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
+    // Header
+    --act-dropdown-bg: #2f3341;
+    --act-dropdown--shadow: rgba(23, 28, 40, 0.4);
+    --act-dropdown-border-color: #171c28;
+    --act-dropdown-separate-bg: #171c28;
+    --act-dropdown-arrow-bg: brightness(0) saturate(100%) invert(19%) sepia(23%) saturate(478%) hue-rotate(189deg)
+        brightness(94%) contrast(95%);
     // Drop Down
     --dropdown-bg-color: #2f3341;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
