@@ -98,4 +98,14 @@
     @include abstracts.screen(md) {
         --prod-review-card-bg: #fff;
     }
+    // Checkout
+    --checkout-element-bg: #fff;
+    --checkout-info-shadow-bg: rgba(237, 237, 246, 0.2);
+    --checkout-separate-bg: #d2d1d6;
+    --checkout-border-bottomm-color: #d2d1d6;
+    --checkout-gift-bg: #f2edfc;
+    --checkout-gift-shadow: rgba(237, 237, 246, 0.2);
+    // Dialog
+    --dialog-bg: #fff;
+    --dialog-shadow: rgba(237, 237, 246, 0.2);
 }

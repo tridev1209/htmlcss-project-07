@@ -214,6 +214,10 @@
     }
     &__btn-wrap {
         position: relative;
+        &:hover .act-dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
     }
     &__btn {
         @extend %flex-itemCenter;
@@ -243,28 +247,25 @@
 .act-dropdown {
     position: absolute;
     right: -55px;
-    top: 80px;
+    top: 50px;
     width: min(645px, 100vw);
+    padding-top: 30px;
     text-align: start;
     transition: opacity, visibility;
     transition-duration: 0.3s;
-    &.hide {
-        opacity: 0;
-        visibility: hidden;
-    }
-    &.show {
-        opacity: 1;
-        visibility: visible;
-    }
+    opacity: 0;
+    visibility: hidden;
+    // opacity: 1;
+    // visibility: visible;
     &__arrow {
         position: absolute;
-
         height: 20.5px;
         top: -17px;
         right: 90px;
         filter: var(--act-dropdown-arrow-bg);
     }
     &__inner {
+        position: relative;
         padding: 30px;
         border-radius: 20px;
         background: var(--act-dropdown-bg);
@@ -323,6 +324,19 @@
         &-btn {
             min-width: 278px;
         }
+    }
+    &__separate {
+        margin: 20px 0;
+        min-height: 1px;
+        width: 100%;
+        background: var(--act-dropdown-border-color);
+    }
+}
+.act-dropdown__liked {
+    @extend .act-dropdown;
+    &:hover {
+        opacity: 1;
+        visibility: visible;
     }
 }
 .cart-review-item {

@@ -10,6 +10,7 @@
     font-size: 1.8rem;
     font-weight: 500;
     user-select: none;
+    white-space: nowrap;
     + .btn {
         &:not(.btn--no-margin) {
             margin-left: 20px;
@@ -18,7 +19,6 @@
     &--text {
         background: transparent;
         font-size: 1.5rem;
-        color: #9e9da8;
     }
     &--primary {
         background: #ffb700;
@@ -30,6 +30,10 @@
     }
     &--rounded {
         border-radius: 99px;
+    }
+    &--small {
+        height: 40px;
+        padding: 0 16px;
     }
     &[disabled],
     &--disabled {
