@@ -58,17 +58,18 @@
     --form-border-color: #d2d1d6;
     --form-text-color: #d2d1d6;
     --form-label-color: #9e9da8;
+    --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+    --form-select-dialog-bg: #fff;
+    --form-option-hover-bg: #ebebeb;
     // Auth
     @include abstracts.screen(md) {
         --auth-content-bg: #fff;
     }
     // Search bar
     --search-bar-bg: #fff;
-    @include abstracts.screen(sm) {
-        --search-bar-bg: #fff;
-    }
+
     @include abstracts.screen(md) {
-        --search-bar-bg: #f6f6f6;
+        --search-bar-bg: #fff;
     }
 
     // Product detail

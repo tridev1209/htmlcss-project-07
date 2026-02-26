@@ -64,6 +64,9 @@ html.dark {
     --form-icon-color: #b9babe;
     --form-icon-color: brightness(0) saturate(100%) invert(76%) sepia(62%) saturate(15%) hue-rotate(197deg)
         brightness(89%) contrast(88%);
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+    --form-select-dialog-bg: #2f3341;
+    --form-option-hover-bg: #292e39;
     // Auth
     --auth-intro-bg: #171c28;
     --auth-heading-color: #b9babe;

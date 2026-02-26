@@ -5,10 +5,24 @@ $error-color: #ed4337;
         opacity: 0.5;
         pointer-events: none;
     }
+    &__row {
+        display: flex;
+        gap: 25px;
+        > * {
+            flex: 1;
+        }
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 0px;
+        }
+    }
     &__group {
         display: flex;
         flex-direction: column;
-
+        margin-top: 25px;
         &--inline {
             margin-top: 20px;
             flex-direction: row;
@@ -17,6 +31,9 @@ $error-color: #ed4337;
         }
         &-btn {
             width: 100%;
+        }
+        @include abstracts.screen(md) {
+            margin-top: 20px;
         }
     }
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
@@ -32,37 +49,151 @@ $error-color: #ed4337;
             display: none;
         }
     }
-    &__text-input {
-        margin-top: 25px;
-        height: 50px;
+    &__text-input,
+    &__text-area {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 12px;
         border-radius: 10px;
         border: 1.5px solid var(--form-border-color);
+
         &:focus-within {
             border-color: #77dae6;
         }
-        @include abstracts.screen(md) {
-            height: 48px;
-            margin-top: 20px;
+    }
+    &__text-area {
+        height: 100px;
+        padding: 12px;
+        &-input {
+            resize: none;
         }
     }
-    &__input {
+    &__text-input {
+        position: relative;
+        height: 50px;
+        @include abstracts.screen(md) {
+            height: 48px;
+        }
+        &--small {
+            height: 42px;
+        }
+    }
+    &__input,
+    &__text-area-input {
+        flex: 1;
         height: 100%;
         font-weight: 500;
         font-size: 1.8rem;
         width: 100%;
-
         line-height: 144.444%;
         &::placeholder {
             color: var(--form-text-color);
         }
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+    &__input {
         &-icon {
             margin-left: 20px;
         }
-        @include abstracts.screen(md) {
+    }
+    &__select-dialog {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 44px;
+        left: 10px;
+        max-height: 303px;
+        min-width: 230px;
+        padding-bottom: 10px;
+        border: 1px solid #d2d1d6;
+        border-radius: 10px;
+        background: var(--form-select-dialog-bg);
+        box-shadow: 0 0 5px var(--form-select-dialog-shadow);
+
+        transition: opacity, visibility, translate;
+        transition-duration: 0.2s;
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+        &.hide {
+            opacity: 0;
+            visibility: hidden;
+            translate: 0 10px;
+        }
+        @include abstracts.screen(sm) {
+            z-index: 1;
+            position: fixed;
+            inset: 0;
+            min-width: initial;
+            max-height: initial;
+        }
+    }
+    &__dialog-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 20px 0;
+    }
+    &__search {
+        display: flex;
+        flex-shrink: 0;
+
+        align-items: center;
+        height: 38px;
+        padding: 0 20px;
+        border-bottom: 1px solid #d2d1d6;
+        &-input {
+            height: 100%;
+            flex: 1;
+            font-size: 1.6rem;
+        }
+        &-icon {
+            margin-left: 10px;
+            width: 16px;
+        }
+        @include abstracts.screen(lg) {
+            height: 48px;
+            &-icon {
+                width: 20px;
+            }
+        }
+        @include abstracts.screen(sm) {
+            border: 1px solid #d2d1d6;
+            border-radius: 10px;
+            margin: 10px 30px 0;
+            padding: 0 14px;
+        }
+    }
+
+    &__options-list {
+        flex: 1;
+        margin-top: 10px;
+        overflow-y: auto;
+        // cuon trong list
+        overscroll-behavior: contain;
+        // khắc phục lỗi scroll trong safari bị bàn phím che mất phần option dưới nên cần padding để hiển thị tối ưu
+        @supports (-webkitl-touch-callout: none) {
+            padding-bottom: 300px;
+        }
+    }
+    &__option {
+        padding: 8px 20px;
+        font-size: 1.4rem;
+        &:not(&--current):hover {
+            background: var(--form-option-hover-bg);
+            cursor: pointer;
+        }
+        &--current {
+            font-weight: 500;
+            background: rgba($color: #ffb700, $alpha: 0.6);
+        }
+        @include abstracts.screen(lg) {
+            padding: 18px 30px;
             font-size: 1.6rem;
         }
     }
