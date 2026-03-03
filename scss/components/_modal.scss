@@ -75,14 +75,15 @@
         margin-right: 20px;
     }
     &__bottom {
-        margin-top: 30px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         flex-wrap: wrap;
-        gap: 30px;
+        margin-top: 50px;
+        gap: 20px;
         padding-right: 20px;
         @include abstracts.screen(md) {
+            margin-top: 40px;
             gap: 15px;
         }
         @include abstracts.screen(sm) {
