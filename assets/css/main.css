@@ -4150,7 +4150,13 @@ html.dark {
   align-items: center;
   gap: 30px;
 }
+.cart-info__back-arrow {
+  width: 40px;
+  padding-right: 20px;
+}
 .cart-info__heading {
+  display: flex;
+  align-items: center;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
@@ -4757,6 +4763,15 @@ html.dark {
   width: 100%;
   height: 1px;
   background: var(--profile-separate-bg);
+}
+
+.form-card__label {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=main.css.map */
