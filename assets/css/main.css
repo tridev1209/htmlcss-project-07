@@ -1852,6 +1852,21 @@ html.dark {
   border-radius: 8px;
   cursor: pointer;
 }
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdown, .top-act__user:hover .act-dropdown__liked {
+  opacity: 1;
+  visibility: visible;
+}
+.top-act__dropdown {
+  right: -15px !important;
+  width: min(300px, 100vw) !important;
+  display: block !important;
+}
+.top-act__dropdown-arrow {
+  right: 15px !important;
+}
 
 .act-dropdown, .act-dropdown__liked {
   position: absolute;
@@ -1861,7 +1876,7 @@ html.dark {
   padding-top: 30px;
   text-align: start;
   transition: opacity, visibility;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   opacity: 0;
   visibility: hidden;
 }
@@ -1965,6 +1980,40 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.user-menu__name {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  padding: 14px 0;
+  justify-content: space-between;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--top-act-separate);
+}
+.user-menu__icon {
+  width: 15px;
+  height: 15px;
 }
 
 .footer {
@@ -4770,6 +4819,7 @@ html.dark {
   font-size: 1.8rem;
 }
 .form-card__bottom {
+  margin-top: 30px;
   display: flex;
   justify-content: flex-end;
 }

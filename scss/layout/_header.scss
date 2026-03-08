@@ -245,6 +245,22 @@
         border-radius: 8px;
         cursor: pointer;
     }
+    &__user {
+        position: relative;
+        &:hover .act-dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__dropdown {
+        right: -15px !important;
+        width: min(300px, 100vw) !important;
+        display: block !important;
+    }
+    &__dropdown-arrow {
+        right: 15px !important;
+    }
 }
 .act-dropdown {
     position: absolute;
@@ -254,7 +270,7 @@
     padding-top: 30px;
     text-align: start;
     transition: opacity, visibility;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     opacity: 0;
     visibility: hidden;
     // opacity: 1;
@@ -367,5 +383,40 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+    }
+}
+.user-menu {
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    &__name {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+    &__list {
+        margin-top: 30px;
+    }
+    &__link {
+        display: flex;
+        padding: 14px 0;
+        justify-content: space-between;
+    }
+    &__separate {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--top-act-separate);
+    }
+    &__icon {
+        width: 15px;
+        height: 15px;
     }
 }
